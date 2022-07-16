@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Student Page</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+	rel="stylesheet"
+	integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+	crossorigin="anonymous">
+</head>
+<body>
+
+	<h1 th:text="${title}"
+		class="d-flex aligns-items-center justify-content-center"></h1>
+
+	<form action="savedata" method="POST">
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputEmail3" class="col-sm-2 col-form-label">Student
+				ID</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputEmail3" name="sId">
+			</div>
+		</div>
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputEmail3" class="col-sm-2 col-form-label">Name</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputEmail3"
+					name="sName">
+			</div>
+		</div>
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputPassword3" class="col-sm-2 col-form-label">Section</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputPassword3"
+					name="sSection">
+			</div>
+		</div>
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputPassword3" class="col-sm-2 col-form-label">Batch</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputPassword3"
+					name="sBatch">
+			</div>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-primary">Submit data</button>
+		</div>
+
+	</form>
+
+	<h3 class="mt-3 d-flex aligns-items-center justify-content-center">Find
+		By Student ID</h3>
+
+
+	<form action="findById" method="POST">
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputPassword3" class="col-sm-2 col-form-label">Student
+				ID: </label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputPassword3"
+					name="sId">
+			</div>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-primary">Find by Id</button>
+		</div>
+
+	</form>
+
+
+	<h3 class="mt-3 d-flex aligns-items-center justify-content-center">Delete
+		Student data By ID</h3>
+	<form action="deletedata" method="GET">
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputPassword3" class="col-sm-2 col-form-label">Student
+				ID: </label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputPassword3"
+					name="sId">
+			</div>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-danger">Delete data</button>
+		</div>
+
+	</form>
+
+	<h3 class="mt-3 d-flex aligns-items-center justify-content-center">Find
+		By Batch</h3>
+	<form action="findbybatch" method="POST">
+		<div
+			class="row mb-3 d-flex aligns-items-center justify-content-center">
+			<label for="inputPassword3" class="col-sm-2 col-form-label">Section:
+			</label>
+			<div class="col-sm-5">
+				<input type="text" class="form-control" id="inputPassword3"
+					name="sSection">
+			</div>
+		</div>
+		<div class="text-center">
+			<button type="submit" class="btn btn-danger">Find by Section</button>
+		</div>
+
+	</form>
+</body>
+</html>
